@@ -1,13 +1,12 @@
 source 'https://rubygems.org'
 
-ruby '2.1.2'
-
-gem 'rails', '~> 4.1.1'
+# let lt2 gem control rails version
+# gem 'rails', '~> 4.1.1'
 
 gem 'mysql2', '~> 0.3.13'
 gem 'sqlite3'
 
-gem 'lti2', :path => '../'
+gem 'lti2', '~> 0.0.3'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 #Active admin dependencies
@@ -21,7 +20,7 @@ gem 'httparty', '~> 0.8.1'
 gem 'jquery-rails', '~> 3.1.0'
 gem 'jquery-ui-rails', '< 5.0.0'
 gem 'json', '~> 1.8.0'
-gem 'jsonpath', '0.5.1'
+#gem 'jsonpath', '0.5.1'
 gem 'lrucache'
 gem 'RedCloth', '~> 4.2.9'
 gem 'sass-rails', '~> 4.0.0'
@@ -45,8 +44,8 @@ group :development, :test do
   # the following components of pry-plus now have to be listed separately
   # so that pry-debugger, which uses debugger, which doesn't compile under
   # ruby 2.1.2, can be replaced with pry-byebug
-  gem 'bond'
-  gem 'jist'
+  #gem 'bond'
+  #gem 'jist'
   gem 'pry-byebug'
   gem 'pry-doc'
   gem 'pry-docmore'
