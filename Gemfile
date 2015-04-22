@@ -6,7 +6,7 @@ source 'https://rubygems.org'
 gem 'mysql2', '~> 0.3.13'
 gem 'sqlite3'
 
-gem 'lti2', '~> 0.0.3'
+gem 'lti2', git: 'git@github.com:vitalsource/lti2.git', branch: 'LTI21-new'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 #Active admin dependencies

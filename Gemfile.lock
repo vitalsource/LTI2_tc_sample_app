@@ -33,6 +33,20 @@ GIT
   specs:
     yaml_db (0.2.3)
 
+GIT
+  remote: git@github.com:vitalsource/lti2.git
+  revision: 21f32f46bd0df6c5fd714483827ff9186c8790c9
+  branch: LTI21-new
+  specs:
+    lti2 (0.0.3)
+      httparty
+      jsonpath
+      lrucache
+      oauth (~> 0.4.7)
+      rails (~> 4.1.6)
+      rb-readline
+      uuid
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -136,14 +150,6 @@ GEM
     libv8 (3.16.14.7)
     lrucache (0.1.4)
       PriorityQueue (~> 0.1.2)
-    lti2 (0.0.3)
-      httparty
-      jsonpath
-      lrucache
-      oauth (~> 0.4.7)
-      rails (~> 4.1.6)
-      rb-readline
-      uuid
     macaddr (1.7.1)
       systemu (~> 2.6.2)
     mail (2.6.3)
@@ -200,7 +206,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.3.2)
-    rb-readline (0.5.1)
+    rb-readline (0.5.2)
     ref (1.0.5)
     responders (1.0.0)
       railties (>= 3.2, < 5)
@@ -258,7 +264,7 @@ DEPENDENCIES
   jquery-ui-rails (< 5.0.0)
   json (~> 1.8.0)
   lrucache
-  lti2 (~> 0.0.3)
+  lti2!
   mysql2 (~> 0.3.13)
   pry
   pry-byebug
