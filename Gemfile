@@ -7,7 +7,7 @@ gem 'rails', '~> 4.1.6'
 gem 'mysql2', '~> 0.3.13'
 gem 'sqlite3'
 
-gem 'lti2', :path => '../'
+gem 'lti2', git: 'git@github.com:vitalsource/lti2-reference.git'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 #Active admin dependencies
