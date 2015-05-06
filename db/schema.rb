@@ -84,14 +84,15 @@ ActiveRecord::Schema.define(version: 20141203013344) do
   create_table "lti2_tc_deployment_requests", force: true do |t|
     t.string   "reg_key"
     t.string   "reg_password"
+    t.string   "tc_oauth_half_secret"
     t.string   "partner_url"
     t.string   "status"
     t.string   "disposition"
     t.string   "confirm_url"
     t.string   "tc_profile_guid"
     t.text     "tool_proxy_json"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   add_index "lti2_tc_deployment_requests", ["tc_profile_guid"], name: "index_deployment_requests_on_tc_profile_guid", unique: true, using: :btree
@@ -146,11 +147,13 @@ ActiveRecord::Schema.define(version: 20141203013344) do
     t.string   "product_name"
     t.string   "description"
     t.string   "key"
-    t.string   "secret"
+    t.text     "secret"
     t.string   "status"
+    t.integer  "new_deployment_request_id"
+    t.string   "end_registration_id"
     t.string   "registration_return_url"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   add_index "lti2_tc_tools", ["key"], name: "index_tools_on_key", unique: true, using: :btree
