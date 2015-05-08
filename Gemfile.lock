@@ -24,7 +24,8 @@ GIT
 
 GIT
   remote: git@github.com:vitalsource/lti2-reference.git
-  revision: ba98f8d532522238e4d26b11a04be43cef01aa83
+  revision: fdd332c852cd34332aa2b49c2b26a73b2846e9db
+  branch: LTI2.1-splitsecret
   specs:
     lti2 (0.0.1)
       httparty
