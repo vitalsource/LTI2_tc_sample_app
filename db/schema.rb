@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141203013344) do
+ActiveRecord::Schema.define(version: 20150505213019) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 20141203013344) do
   create_table "lti2_tc_deployment_requests", force: true do |t|
     t.string   "reg_key"
     t.string   "reg_password"
-    t.string   "tc_oauth_half_secret"
+    t.text     "tc_oauth_half_secret"
     t.string   "partner_url"
     t.string   "status"
     t.string   "disposition"
