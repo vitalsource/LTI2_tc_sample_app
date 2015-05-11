@@ -9,11 +9,11 @@ namespace :init_task do
     puts "load mysql"
     system "rake db:load RAILS_ENV=mysql"
     puts "mysqldump to closet/backups"
-    system "mysqldump tcsampleapp -u ltiuser --password=ltipswd >> ../closet/backups/tcsampleapp.sql"
+    system "mysqldump tcsampleapp -u ltiuser --password=ltipswd >> data/tcsampleapp.sql"
     puts "load sqlite3"
     system "rake db:load RAILS_ENV=sqlite3"
     puts "copy sqlite3 to closet/backups"
-    system "cp db/development.sqlite3 ../closet/backups/tcsampleapp.sqlite3"
+    system "cp db/development.sqlite3 data/tcsampleapp.sqlite3"
   end
 
   desc "Truncate the wirelog"
