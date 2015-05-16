@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Lumos::Application.config.secret_token = '0ef4bfa2743fa90603f75c8875879568e0911038c5231c2b7ce1c2e4498cd1605ee7a958b87ed3969e8290508778f1cee2144326d4be1fa6be555ebecee1c566'
+Lumos::Application.config.secret_token = 'baf8aae97dd254495fc50a9cd23b620115ff99355b7c80ebfca8f68e5e907630c972b6c86d29c39ed09edd9bf560bbdd3838692ee366d3f54c580b2177b25789'
