@@ -5,7 +5,7 @@ class DocsController < ApplicationController
     if filename =~ /.pdf$/
       send_file filename, :disposition => 'inline'
     else
-      render :file => filename
+      (render :file => filename, layout: false) and return
     end
   end
 

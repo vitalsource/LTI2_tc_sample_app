@@ -1,12 +1,16 @@
 
 :javascript
   function render_document(filename) {
-    window.open(filename, "_blank")
+    window.open('/docs?filename='+filename, "_blank")
   }
   
   function render_site(site) {
     window.open(site+"?time="+Math.random(), "_blank")
     return false
+  }
+
+  function return_wirelog_filename() {
+    return "#{Rails.application.config.wire_log.output_file_name}"
   }
 
 
@@ -22,5 +26,5 @@
 
 %h3
   *
-  %a{:href => "#", :onclick => "return render_site('/wirelog.html');"} Show Wirelog
+  %a{:href => "#", :onclick => 'return render_document(return_wirelog_filename())'} Show Wirelog
   
