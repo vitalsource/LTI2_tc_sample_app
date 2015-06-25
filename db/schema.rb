@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 20150505213019) do
   create_table "lti2_tc_deployment_requests", force: true do |t|
     t.string   "reg_key"
     t.string   "reg_password"
-    t.text     "tc_oauth_half_secret"
+    t.text     "final_secret"
     t.string   "partner_url"
     t.string   "status"
     t.string   "disposition"
