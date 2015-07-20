@@ -3,6 +3,7 @@ class Lti2TcCollapseData < ActiveRecord::Migration
     create_table "lti2_tc_deployment_requests", force: true do |t|
       t.string   "reg_key"
       t.string   "reg_password"
+      t.string   "tool_proxy_guid"
       t.text     "final_secret"
       t.string   "partner_url"
       t.string   "status"
