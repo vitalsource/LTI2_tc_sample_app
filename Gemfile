@@ -7,6 +7,9 @@ gem 'rails', '~> 4.1.6'
 gem 'mysql2', '~> 0.3.13'
 gem 'sqlite3'
 
+# remove following to use official oauth gem
+# gem 'oauth', path: '../oauth-sha256'
+
 # gem 'lti2', git: 'git@github.com:vitalsource/lti2-reference.git', branch: 'LTI2.1-splitsecret'
 gem 'lti2', path: '../LTI2-Reference'
 
