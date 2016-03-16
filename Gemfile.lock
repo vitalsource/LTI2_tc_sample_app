@@ -22,8 +22,9 @@ GIT
   specs:
     yaml_db (0.2.3)
 
-PATH
-  remote: ../LTI2-Reference
+GIT
+  remote: git://github.com/vitalsource/LTI2-Reference.git
+  revision: 1032a5353780c6deb1c4ccc4e5074ecc98fdf914
   specs:
     lti2 (0.0.1)
       httparty
@@ -296,3 +297,6 @@ DEPENDENCIES
   uglifier (~> 2.4.0)
   uuid (~> 2.3.7)
   yaml_db!
+
+BUNDLED WITH
+   1.10.6

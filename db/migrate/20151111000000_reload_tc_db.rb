@@ -1,18 +1,18 @@
-class Lti2TcCollapseData < ActiveRecord::Migration
+class ReloadTcDb < ActiveRecord::Migration
   def up
-    create_table "lti2_tc_deployment_requests", force: true do |t|
+     create_table "lti2_tc_deployment_requests", force: true do |t|
       t.string   "reg_key"
       t.string   "reg_password"
-      t.string   "tool_proxy_guid"
       t.text     "final_secret"
       t.string   "partner_url"
       t.string   "status"
       t.string   "disposition"
       t.string   "confirm_url"
       t.string   "tc_profile_guid"
+      t.string   "tool_proxy_guid"
       t.text     "tool_proxy_json"
-      t.datetime "created_at",           null: false
-      t.datetime "updated_at",           null: false
+      t.datetime "created_at",      null: false
+      t.datetime "updated_at",      null: false
     end
 
     add_index "lti2_tc_deployment_requests", ["tc_profile_guid"], name: "index_deployment_requests_on_tc_profile_guid", unique: true, using: :btree
@@ -77,8 +77,15 @@ class Lti2TcCollapseData < ActiveRecord::Migration
     end
 
     add_index "lti2_tc_tools", ["key"], name: "index_tools_on_key", unique: true, using: :btree
-    
+
   end
+
   def down
+    drop_table :lti2_tc_deployment_requests
+    drop_table :lti2_tc_registries
+    drop_table :lti2_tc_tool_consumer_profiles
+    drop_table :lti2_tc_tool_settings
+    drop_table :lti2_tc_tools
   end
+
 end
