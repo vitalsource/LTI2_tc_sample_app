@@ -17,12 +17,9 @@
 service mysql start
 mysql --user="root" --execute="CREATE DATABASE tcsampleapp;"
 mysql --user="root" tcsampleapp < ./data/lti2_tc_mysql_init.sql
-mysql --user="root" tcsampleapp < ./data/tcsampleapp.sql
 
 mysql  --user="root" --database "tcsampleapp" \
-      --execute="update lti2_tp_registries set content = '$HOST' where name = 'tp_deployment_url'"
-mysql  --user="root" --database "tcsampleapp" \
-      --execute="update lti2_tp_registries set content = '/apps/lti2_tc/wirelog.html' where name = 'wirelog_filename'"
+      --execute="update lti2_tc_registries set content = '$HOST' where name = 'tc_deployment_url'"
 
 ##Migrate the database
 #rake db:migrate RAILS_ENV=development

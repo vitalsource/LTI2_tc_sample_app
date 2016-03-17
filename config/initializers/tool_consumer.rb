@@ -40,3 +40,5 @@ if full_filename.present?
 else
   Rails.application.config.wire_log = nil
 end
+
+puts("Init tc_deployment_url: #{Rails.application.config.tool_consumer_registry.registry['tc_deployment_url']}")
