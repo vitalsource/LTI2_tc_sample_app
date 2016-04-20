@@ -22,9 +22,8 @@ GIT
   specs:
     yaml_db (0.2.3)
 
-GIT
-  remote: git://github.com/vitalsource/LTI2-Reference.git
-  revision: 1032a5353780c6deb1c4ccc4e5074ecc98fdf914
+PATH
+  remote: ../LTI2-Reference
   specs:
     lti2 (0.0.1)
       httparty

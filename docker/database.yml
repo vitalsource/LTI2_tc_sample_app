@@ -1,0 +1,13 @@
+
+# for mysql use  (default)
+docker-mysql:
+  adapter: mysql2
+  host: db
+  port: 3306
+  encoding: utf8
+  database: tcsampleapp
+  username: ltiuser
+  password: ltipswd
+  pool: 5
+  timeout: 5000
+

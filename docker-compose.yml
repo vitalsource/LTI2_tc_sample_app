@@ -1,0 +1,35 @@
+version: '2'
+services:
+  db:
+    image: mysql
+    environment:
+      MYSQL_USER: ltiuser
+      MYSQL_PASSWORD: ltipswd
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - /Users/johntibbetts/git/LTI2_tc_sample_app/docker/lti2-testers-init:/docker-entrypoint-initdb.d
+
+  tc:
+    image: lti2_tool_consumer_tester
+    command: bash -c "while ! curl -s db:3306 > /dev/null; do echo waiting for mysql; sleep 1; done; bundle exec rails s -p 3000 -b 0.0.0.0"
+    ports:
+      - "3000:3000"
+    links:
+      - db:db
+    environment:
+      TC_PORT: 3000
+      RAILS_ENV: docker-mysql
+    depends_on:
+      - db
+
+  tp:
+    image: lti2_tool_provider_tester
+    command: bash -c "while ! curl -s db:3306 > /dev/null; do echo waiting for mysql; sleep 1; done; bundle exec rails s -p 3000 -b 0.0.0.0"
+    ports:
+      - "3001:3000"
+    environment:
+      TP_PORT: 3001
+      RAILS_ENV: docker-mysql
+    depends_on:
+      - db
+
