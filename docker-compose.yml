@@ -19,6 +19,7 @@ services:
     environment:
       TC_PORT: 3000
       RAILS_ENV: docker-mysql
+      TC_DEPLOYMENT_URL: http://192.168.99.100:3000
     depends_on:
       - db
 
@@ -30,6 +31,7 @@ services:
     environment:
       TP_PORT: 3001
       RAILS_ENV: docker-mysql
+      TP_DEPLOYMENT_URL: http://192.168.99.100:3001
     depends_on:
       - db
 
