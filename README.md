@@ -1,4 +1,5 @@
-LTI2 -- Tool Consumer
+LTI2 -- Tool Consumer Sample App
 =====================
 
-**Tool Consumer documentation as been moved to the README in the parent directory ('lti_reference')**
+This repo contains an implementation of a sample Tool Consumer.
+See the [LTI-Reference repo](https://github.com/vitalsource/LTI2-Reference) for docs.
